@@ -17,6 +17,6 @@ struct MainContent: View {
     }
 }
 
-//#Preview {
-//    MainContent(mainUIState: MainUIState())
+//#Preview {//コメントアウトしなくても動く
+//    MainContent(mainUIState: MainUIState())//ダミーデータを作成している
 //}
