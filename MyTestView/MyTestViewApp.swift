@@ -11,7 +11,8 @@ import SwiftUI
 struct MyTestViewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            MainScreen()
         }
     }
 }
