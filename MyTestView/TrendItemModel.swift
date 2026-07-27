@@ -15,3 +15,14 @@ struct TrendItemModel: Identifiable {
     let stars: Int
     let url: String
 }
+extension TrendItemModel {
+    //GitHubRepositoryItemからTrendItemModelを作成するイニシャライザ
+    init(from gitHubItem: GitHubRepositoryItem) {
+        self.name = gitHubItem.fullName
+        self.description = gitHubItem.description ?? "説明なし"
+        self.language = gitHubItem.language ?? "不明"
+        self.stars = gitHubItem.stargazersCount
+        self.url = gitHubItem.htmlUrl
+    }
+
+}
