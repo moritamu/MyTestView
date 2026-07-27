@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct MainScreen: View {
+    @State private var viewModel = MainViewModel()
+
     var body: some View {
         NavigationStack {
-            MainContent()
+            VStack {
+                MainContent(mainUIState: viewModel.uiState)
+            }
             .navigationTitle("Repositories")
+            .onAppear {
+                viewModel.load()
+            }
         }
     }
 }
