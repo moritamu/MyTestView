@@ -41,7 +41,7 @@ struct MainContent: View {
                         .foregroundStyle(.orange)
                     Text(errorMessage)
                         .foregroundStyle(.red)
-                    ,multilineTextAlignment(.center)
+                        .multilineTextAlignment(.center)
                         .padding()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -64,7 +64,20 @@ struct MainContent: View {
     }
 }
 
-
+//まだ書き換えてない
 //#Preview {//コメントアウトしなくても動く
 //    MainContent(mainUIState: MainUIState())//ダミーデータを作成している
 //}
+#Preview("初期状態") {
+    MainContent(mainUIState: MainUIState())
+}
+#Preview("検索結果あり") {
+    MainContent(mainUIState: MainUIState(trendItemModelList: [
+        TrendItemModel(name: "apple/swift", description: "The Swift Programing Language", language: "Swift", stars: 4, url: "https://github.com/apple/swift"
+                      )
+    ],
+                                         isLoading: false,
+                                         errorMessage: nil,
+                                         hasSearched: true
+                                        ))
+}
