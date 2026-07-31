@@ -12,7 +12,8 @@ struct MyTestViewApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            MainScreen()
+//            MainScreen()
+            AppTabView()
         }
     }
 }
